@@ -29,6 +29,10 @@ TabPFN predicts from the rows it is shown, so rows can be removed and the questi
 
 The answer being explained is always the full model's answer. The small 60-order context is used only to search for precedents.
 
+![Row influence for one order, and its removal test](docs/influence_and_removal.png)
+
+*One order, from `notebooks/01_first_check.ipynb`. Left: influence of each of the 100 context rows. A few rows carry almost all of it. Right: removing the top-10 precedents drops confidence far more than removing 10 random rows.*
+
 ## Results
 
 ### The experiment: 100 sales orders
@@ -47,6 +51,10 @@ For 100 held-out orders, the precedents were found and then removed from the ful
 - Precedents beat the most similar orders in 78 of 100 cases.
 - The typical effect is small: the median fall was 4.5 points. The orders split into 15 where confidence fell by more than 40 points, 32 where it fell by 5 to 18, and 53 where almost nothing moved. For most predictions, ten past orders are not the whole reason.
 - All 15 strong cases had at least one precedent from the same customer as the new order. This is a pattern, not a tested cause.
+
+![Full-model removal test on 100 orders](docs/experiment_100_orders.png)
+
+*From `notebooks/03_full_model_test.ipynb`. Left: fall in the full model's confidence for each removal group. Middle: each order, green if verified and red if not. Right: the drop seen with the small model against the drop in the full model.*
 
 **Local tests overstate faithfulness.** An earlier run tested precedents against a small local model (the 60 nearest orders) instead of the full one. On the same 100 orders it verified 88%. Against the full model, 44% held. An explanation can pass a shortcut test and fail on the model people would use.
 
