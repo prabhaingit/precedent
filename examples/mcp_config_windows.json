@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "precedent": {
+      "command": "C:\\path\\to\\precedent\\.venv\\Scripts\\precedent-mcp.exe",
+      "args": ["--ledger", "C:\\path\\to\\precedent\\precedent_ledger.jsonl"],
+      "env": {
+        "PRECEDENT_ENV_FILE": "C:\\path\\to\\precedent\\.env"
+      }
+    }
+  }
+}

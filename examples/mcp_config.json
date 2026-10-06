@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "precedent": {
+      "command": "/absolute/path/to/precedent/.venv/bin/precedent-mcp",
+      "args": ["--ledger", "/absolute/path/to/precedent/precedent_ledger.jsonl"],
+      "env": {
+        "TABPFN_TOKEN": "YOUR_PRIOR_LABS_KEY",
+        "HF_TOKEN": "YOUR_HF_TOKEN"
+      }
+    }
+  }
+}
