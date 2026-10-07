@@ -230,3 +230,7 @@ The influence estimator is not new. It follows datamodels (Ilyas et al., 2022, a
 Precedent applies the estimator to single predictions of an unmodified TabPFN-3.5, checks each explanation by removal against the full model, and logs the outcome. To our knowledge, based on a literature and repository search on 2 October 2026, per-prediction, removal-verified row explanations with an audit trail had not been published for a tabular foundation model.
 
 Dataset: SALT (Klein et al., 2024, arXiv:2501.03413). Model: TabPFN-3.5 (Prior Labs, 2026, arXiv:2609.17895).
+
+## License
+
+Code is released under the [MIT License](LICENSE). The SALT dataset and TabPFN weights carry their own licenses (see above and the model card).
